@@ -9,6 +9,14 @@ const appBar = {
     backgroundColor: '#FF9933'
 }
 
+const toolBar = {
+    justifyContent: 'space-between'
+}
+
+const text = {
+    fontStyle: 'italic'
+}
+
 
 // Functions
 
@@ -31,10 +39,10 @@ const TopBar = () => {
     return (
         <HideOnScroll>
             <AppBar style={appBar}>
-                <Toolbar>
-                    <Typography>Curry King Express</Typography>
+                <Toolbar style={toolBar}>
+                    <Typography style={text} variant='h5' align='center'>Curry King Express</Typography>
                     <IconButton edge="end" color="inherit" aria-label="menu">
-                        <StorefrontIcon/>
+                        <StorefrontIcon fontSize='large' />
                     </IconButton>
                 </Toolbar>
             </AppBar>    
