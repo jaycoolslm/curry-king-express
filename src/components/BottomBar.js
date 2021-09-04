@@ -1,8 +1,9 @@
 import React from 'react'
 import { BottomNavigation, BottomNavigationAction } from "@material-ui/core"
 import RestaurantIcon from '@material-ui/icons/Restaurant'
-import FavoriteIcon from '@material-ui/icons/Favorite'
+import EventAvailableIcon from '@material-ui/icons/EventAvailable';
 import PhoneIcon from '@material-ui/icons/Phone';
+import { Link } from 'gatsby';
 
 const bottomNavContainer = {
     display: 'flex',
@@ -25,9 +26,9 @@ const BottomBar = () => {
     return (
         <div style={bottomNavContainer}>
             <BottomNavigation style={bottomNav} showLabels >
-                <BottomNavigationAction label="Menu" icon={<RestaurantIcon style={icons} />} />
-                <BottomNavigationAction label="Specialties" icon={<FavoriteIcon style={icons} />} />
-                <BottomNavigationAction label="Contact" icon={<PhoneIcon style={icons} />} />
+                <Link to="/menu"><BottomNavigationAction label="Menu" icon={<RestaurantIcon style={icons} />} /></Link>
+                <Link to="/private"><BottomNavigationAction label="Hire" icon={<EventAvailableIcon style={icons} />} /></Link>
+                <Link to="/contact"><BottomNavigationAction label="Contact" icon={<PhoneIcon style={icons} />} /></Link>
 
                 {/* 
                     To Do: 
