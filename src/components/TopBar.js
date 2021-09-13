@@ -6,11 +6,13 @@ import StorefrontIcon from '@material-ui/icons/Storefront';
 // Styles
 
 const appBar = {
-    backgroundColor: '#FF9933'
+    backgroundColor: '#FF9933',
+    height: '15vh',
+    justifyContent: 'center'
 }
 
 const toolBar = {
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
 }
 
 const text = {
@@ -40,8 +42,8 @@ const TopBar = () => {
         <HideOnScroll>
             <AppBar style={appBar}>
                 <Toolbar style={toolBar}>
-                    <Typography style={text} variant='h5' align='center'>Curry King Express</Typography>
-                    <IconButton edge="end" color="inherit" aria-label="menu">
+                    <Typography style={text} variant='h3' align='center'>Curry King Express</Typography>
+                    <IconButton edge="end" color="inherit" aria-label="menu" href='/'>
                         <StorefrontIcon fontSize='large' />
                     </IconButton>
                 </Toolbar>
